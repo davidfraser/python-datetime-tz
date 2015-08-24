@@ -19,8 +19,6 @@
 # pylint: disable=g-import-not-at-top
 
 """This script updates win32tz_map based on the data at the URL below."""
-from future import standard_library
-standard_library.install_aliases()
 from builtins import str
 
 import hashlib
@@ -37,7 +35,10 @@ try:
   # pylint: disable=redefined-builtin
   from importlib import reload
 except ImportError:
-  pass
+  try:
+    from imp import reload
+  except ImportError:
+    pass
 
 import genshi.input
 try:
@@ -103,7 +104,8 @@ def update_stored_win32tz_map():
   map_dir = os.path.dirname(os.path.abspath(__file__))
   map_filename = os.path.join(map_dir, "win32tz_map.py")
   if os.path.exists(map_filename):
-    reload(win32tz_map)
+    if win32tz_map is not None:
+        reload(win32tz_map)
     current_hash = getattr(win32tz_map, "source_hash", None)
     if current_hash == source_hash:
       return False
