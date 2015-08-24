@@ -215,7 +215,7 @@ class TestTimeZoneBaseTest(TestTimeZoneBase):
     # Choose 100 random unix timestamps and run them through the assert
     # function.
     random.seed(1)
-    unix_ts = random.sample(xrange(0, min(os_timestamp_limits[-1]*2, sys.maxint)), 50)
+    unix_ts = random.sample(xrange(0, min(os_timestamp_limits[-1]*2, sys.maxsize)), 50)
     unix_ts.sort()
 
     for timezone in ("Australia/Sydney", "US/Pacific", "Europe/Minsk"):
@@ -1335,7 +1335,7 @@ class TestDatetimeTZ(TestTimeZoneBase):
     self.assertTrue("Australia/Sydney" in def_tz)
     self.assertFalse("Made/Up" in def_tz)
     self.assertTrue("Australia/Sydney" in def_tz.keys())
-    self.assertTrue(def_tz.has_key("Australia/Sydney"))
+    self.assertTrue("Australia/Sydney" in def_tz)
     self.assertRaises(KeyError, def_tz.get, "Made/Up")
     self.assertEquals(def_tz.get("Made/Up", None), None)
 
