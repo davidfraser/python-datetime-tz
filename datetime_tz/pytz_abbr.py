@@ -121,124 +121,124 @@ tzinfos = tzinfos_create("all")
 
 # Create the abbreviations.
 # *WARNING*: Order matters!
-tzabbr_register("A", u"Alpha Time Zone", u"Military", "Etc/GMT-1", False)
-tzabbr_register("ACDT", u"Australian Central Daylight Time", u"Australia",
+tzabbr_register("A", "Alpha Time Zone", "Military", "Etc/GMT-1", False)
+tzabbr_register("ACDT", "Australian Central Daylight Time", "Australia",
                 "Australia/Adelaide", True)
-tzabbr_register("ACST", u"Australian Central Standard Time", u"Australia",
+tzabbr_register("ACST", "Australian Central Standard Time", "Australia",
                 "Australia/Adelaide", False)
-tzabbr_register("ADT", u"Atlantic Daylight Time", u"North America",
+tzabbr_register("ADT", "Atlantic Daylight Time", "North America",
                 "America/Halifax", True)
-tzabbr_register("AEDT", u"Australian Eastern Daylight Time", u"Australia",
+tzabbr_register("AEDT", "Australian Eastern Daylight Time", "Australia",
                 "Australia/Sydney", True)
-tzabbr_register("AEST", u"Australian Eastern Standard Time", u"Australia",
+tzabbr_register("AEST", "Australian Eastern Standard Time", "Australia",
                 "Australia/Sydney", False)
-tzabbr_register("AKDT", u"Alaska Daylight Time", u"North America",
+tzabbr_register("AKDT", "Alaska Daylight Time", "North America",
                 "US/Alaska", True)
-tzabbr_register("AKST", u"Alaska Standard Time", u"North America",
+tzabbr_register("AKST", "Alaska Standard Time", "North America",
                 "US/Alaska", False)
-tzabbr_register("AST", u"Atlantic Standard Time", u"North America",
+tzabbr_register("AST", "Atlantic Standard Time", "North America",
                 "America/Halifax", False)
-tzabbr_register("AWDT", u"Australian Western Daylight Time", u"Australia",
+tzabbr_register("AWDT", "Australian Western Daylight Time", "Australia",
                 "Australia/West", True)
-tzabbr_register("AWST", u"Australian Western Standard Time", u"Australia",
+tzabbr_register("AWST", "Australian Western Standard Time", "Australia",
                 "Australia/West", False)
-tzabbr_register("B", u"Bravo Time Zone", u"Military", "Etc/GMT-2", False)
-tzabbr_register("BST", u"British Summer Time", u"Europe", "Europe/London", True)
-tzabbr_register("C", u"Charlie Time Zone", u"Military", "Etc/GMT-2", False)
-tzabbr_register("CDT", u"Central Daylight Time", u"North America",
+tzabbr_register("B", "Bravo Time Zone", "Military", "Etc/GMT-2", False)
+tzabbr_register("BST", "British Summer Time", "Europe", "Europe/London", True)
+tzabbr_register("C", "Charlie Time Zone", "Military", "Etc/GMT-2", False)
+tzabbr_register("CDT", "Central Daylight Time", "North America",
                 "US/Central", True)
-tzabbr_register("CEDT", u"Central European Daylight Time", u"Europe",
+tzabbr_register("CEDT", "Central European Daylight Time", "Europe",
                 "Etc/GMT+2", True)
-tzabbr_register("CEST", u"Central European Summer Time", u"Europe",
+tzabbr_register("CEST", "Central European Summer Time", "Europe",
                 "Etc/GMT+2", True)
-tzabbr_register("CET", u"Central European Time", u"Europe", "Etc/GMT+1", False)
-tzabbr_register("CST", u"Central Standard Time", u"North America",
+tzabbr_register("CET", "Central European Time", "Europe", "Etc/GMT+1", False)
+tzabbr_register("CST", "Central Standard Time", "North America",
                 "US/Central", False)
-tzabbr_register("CXT", u"Christmas Island Time", u"Australia",
+tzabbr_register("CXT", "Christmas Island Time", "Australia",
                 "Indian/Christmas", False)
-tzabbr_register("D", u"Delta Time Zone", u"Military", "Etc/GMT-2", False)
-tzabbr_register("E", u"Echo Time Zone", u"Military", "Etc/GMT-2", False)
-tzabbr_register("EDT", u"Eastern Daylight Time", u"North America",
+tzabbr_register("D", "Delta Time Zone", "Military", "Etc/GMT-2", False)
+tzabbr_register("E", "Echo Time Zone", "Military", "Etc/GMT-2", False)
+tzabbr_register("EDT", "Eastern Daylight Time", "North America",
                 "US/Eastern", True)
-tzabbr_register("EEDT", u"Eastern European Daylight Time", u"Europe",
+tzabbr_register("EEDT", "Eastern European Daylight Time", "Europe",
                 "Etc/GMT+3", True)
-tzabbr_register("EEST", u"Eastern European Summer Time", u"Europe",
+tzabbr_register("EEST", "Eastern European Summer Time", "Europe",
                 "Etc/GMT+3", True)
-tzabbr_register("EET", u"Eastern European Time", u"Europe", "Etc/GMT+2", False)
-tzabbr_register("EST", u"Eastern Standard Time", u"North America",
+tzabbr_register("EET", "Eastern European Time", "Europe", "Etc/GMT+2", False)
+tzabbr_register("EST", "Eastern Standard Time", "North America",
                 "US/Eastern", False)
-tzabbr_register("F", u"Foxtrot Time Zone", u"Military", "Etc/GMT-6", False)
-tzabbr_register("G", u"Golf Time Zone", u"Military", "Etc/GMT-7", False)
-tzabbr_register("GMT", u"Greenwich Mean Time", u"Europe", pytz.utc, False)
-tzabbr_register("H", u"Hotel Time Zone", u"Military", "Etc/GMT-8", False)
-#tzabbr_register("HAA", u"Heure Avancée de l'Atlantique", u"North America", u"UTC - 3 hours")
-#tzabbr_register("HAC", u"Heure Avancée du Centre", u"North America", u"UTC - 5 hours")
-tzabbr_register("HADT", u"Hawaii-Aleutian Daylight Time", u"North America",
+tzabbr_register("F", "Foxtrot Time Zone", "Military", "Etc/GMT-6", False)
+tzabbr_register("G", "Golf Time Zone", "Military", "Etc/GMT-7", False)
+tzabbr_register("GMT", "Greenwich Mean Time", "Europe", pytz.utc, False)
+tzabbr_register("H", "Hotel Time Zone", "Military", "Etc/GMT-8", False)
+#tzabbr_register("HAA", "Heure Avancée de l'Atlantique", "North America", "UTC - 3 hours")
+#tzabbr_register("HAC", "Heure Avancée du Centre", "North America", "UTC - 5 hours")
+tzabbr_register("HADT", "Hawaii-Aleutian Daylight Time", "North America",
                 "Pacific/Honolulu", True)
-#tzabbr_register("HAE", u"Heure Avancée de l'Est", u"North America", u"UTC - 4 hours")
-#tzabbr_register("HAP", u"Heure Avancée du Pacifique", u"North America", u"UTC - 7 hours")
-#tzabbr_register("HAR", u"Heure Avancée des Rocheuses", u"North America", u"UTC - 6 hours")
-tzabbr_register("HAST", u"Hawaii-Aleutian Standard Time", u"North America",
+#tzabbr_register("HAE", "Heure Avancée de l'Est", "North America", "UTC - 4 hours")
+#tzabbr_register("HAP", "Heure Avancée du Pacifique", "North America", "UTC - 7 hours")
+#tzabbr_register("HAR", "Heure Avancée des Rocheuses", "North America", "UTC - 6 hours")
+tzabbr_register("HAST", "Hawaii-Aleutian Standard Time", "North America",
                 "Pacific/Honolulu", False)
-#tzabbr_register("HAT", u"Heure Avancée de Terre-Neuve", u"North America", u"UTC - 2:30 hours")
-#tzabbr_register("HAY", u"Heure Avancée du Yukon", u"North America", u"UTC - 8 hours")
-tzabbr_register("HDT", u"Hawaii Daylight Time", u"North America",
+#tzabbr_register("HAT", "Heure Avancée de Terre-Neuve", "North America", "UTC - 2:30 hours")
+#tzabbr_register("HAY", "Heure Avancée du Yukon", "North America", "UTC - 8 hours")
+tzabbr_register("HDT", "Hawaii Daylight Time", "North America",
                 "Pacific/Honolulu", True)
-#tzabbr_register("HNA", u"Heure Normale de l'Atlantique", u"North America", u"UTC - 4 hours")
-#tzabbr_register("HNC", u"Heure Normale du Centre", u"North America", u"UTC - 6 hours")
-#tzabbr_register("HNE", u"Heure Normale de l'Est", u"North America", u"UTC - 5 hours")
-#tzabbr_register("HNP", u"Heure Normale du Pacifique", u"North America", u"UTC - 8 hours")
-#tzabbr_register("HNR", u"Heure Normale des Rocheuses", u"North America", u"UTC - 7 hours")
-#tzabbr_register("HNT", u"Heure Normale de Terre-Neuve", u"North America", u"UTC - 3:30 hours")
-#tzabbr_register("HNY", u"Heure Normale du Yukon", u"North America", u"UTC - 9 hours")
-tzabbr_register("HST", u"Hawaii Standard Time", u"North America",
+#tzabbr_register("HNA", "Heure Normale de l'Atlantique", "North America", "UTC - 4 hours")
+#tzabbr_register("HNC", "Heure Normale du Centre", "North America", "UTC - 6 hours")
+#tzabbr_register("HNE", "Heure Normale de l'Est", "North America", "UTC - 5 hours")
+#tzabbr_register("HNP", "Heure Normale du Pacifique", "North America", "UTC - 8 hours")
+#tzabbr_register("HNR", "Heure Normale des Rocheuses", "North America", "UTC - 7 hours")
+#tzabbr_register("HNT", "Heure Normale de Terre-Neuve", "North America", "UTC - 3:30 hours")
+#tzabbr_register("HNY", "Heure Normale du Yukon", "North America", "UTC - 9 hours")
+tzabbr_register("HST", "Hawaii Standard Time", "North America",
                 "Pacific/Honolulu", False)
-tzabbr_register("I", u"India Time Zone", u"Military", "Etc/GMT-9", False)
-tzabbr_register("IST", u"Irish Summer Time", u"Europe", "Europe/Dublin", True)
-tzabbr_register("K", u"Kilo Time Zone", u"Military", "Etc/GMT-10", False)
-tzabbr_register("L", u"Lima Time Zone", u"Military", "Etc/GMT-11", False)
-tzabbr_register("M", u"Mike Time Zone", u"Military", "Etc/GMT-12", False)
-tzabbr_register("MDT", u"Mountain Daylight Time", u"North America",
+tzabbr_register("I", "India Time Zone", "Military", "Etc/GMT-9", False)
+tzabbr_register("IST", "Irish Summer Time", "Europe", "Europe/Dublin", True)
+tzabbr_register("K", "Kilo Time Zone", "Military", "Etc/GMT-10", False)
+tzabbr_register("L", "Lima Time Zone", "Military", "Etc/GMT-11", False)
+tzabbr_register("M", "Mike Time Zone", "Military", "Etc/GMT-12", False)
+tzabbr_register("MDT", "Mountain Daylight Time", "North America",
                 "US/Mountain", True)
-#tzabbr_register("MESZ", u"Mitteleuroäische Sommerzeit", u"Europe", u"UTC + 2 hours")
-#tzabbr_register("MEZ", u"Mitteleuropäische Zeit", u"Europe", u"UTC + 1 hour")
-tzabbr_register("MSD", u"Moscow Daylight Time", u"Europe",
+#tzabbr_register("MESZ", "Mitteleuroäische Sommerzeit", "Europe", "UTC + 2 hours")
+#tzabbr_register("MEZ", "Mitteleuropäische Zeit", "Europe", "UTC + 1 hour")
+tzabbr_register("MSD", "Moscow Daylight Time", "Europe",
                 "Europe/Moscow", True)
-tzabbr_register("MSK", u"Moscow Standard Time", u"Europe",
+tzabbr_register("MSK", "Moscow Standard Time", "Europe",
                 "Europe/Moscow", False)
-tzabbr_register("MST", u"Mountain Standard Time", u"North America",
+tzabbr_register("MST", "Mountain Standard Time", "North America",
                 "US/Mountain", False)
-tzabbr_register("N", u"November Time Zone", u"Military", "Etc/GMT+1", False)
-tzabbr_register("NDT", u"Newfoundland Daylight Time", u"North America",
+tzabbr_register("N", "November Time Zone", "Military", "Etc/GMT+1", False)
+tzabbr_register("NDT", "Newfoundland Daylight Time", "North America",
                 "America/St_Johns", True)
-tzabbr_register("NFT", u"Norfolk (Island) Time", u"Australia",
+tzabbr_register("NFT", "Norfolk (Island) Time", "Australia",
                 "Pacific/Norfolk", False)
-tzabbr_register("NST", u"Newfoundland Standard Time", u"North America",
+tzabbr_register("NST", "Newfoundland Standard Time", "North America",
                 "America/St_Johns", False)
-tzabbr_register("O", u"Oscar Time Zone", u"Military", "Etc/GMT+2", False)
-tzabbr_register("P", u"Papa Time Zone", u"Military", "Etc/GMT+3", False)
-tzabbr_register("PDT", u"Pacific Daylight Time", u"North America",
+tzabbr_register("O", "Oscar Time Zone", "Military", "Etc/GMT+2", False)
+tzabbr_register("P", "Papa Time Zone", "Military", "Etc/GMT+3", False)
+tzabbr_register("PDT", "Pacific Daylight Time", "North America",
                 "US/Pacific", True)
-tzabbr_register("PST", u"Pacific Standard Time", u"North America",
+tzabbr_register("PST", "Pacific Standard Time", "North America",
                 "US/Pacific", False)
-tzabbr_register("Q", u"Quebec Time Zone", u"Military", "Etc/GMT+4", False)
-tzabbr_register("R", u"Romeo Time Zone", u"Military", "Etc/GMT+5", False)
-tzabbr_register("S", u"Sierra Time Zone", u"Military", "Etc/GMT+6", False)
-tzabbr_register("T", u"Tango Time Zone", u"Military", "Etc/GMT+7", False)
-tzabbr_register("U", u"Uniform Time Zone", u"Military", "Etc/GMT+8", False)
-tzabbr_register("UTC", u"Coordinated Universal Time", u"Europe",
+tzabbr_register("Q", "Quebec Time Zone", "Military", "Etc/GMT+4", False)
+tzabbr_register("R", "Romeo Time Zone", "Military", "Etc/GMT+5", False)
+tzabbr_register("S", "Sierra Time Zone", "Military", "Etc/GMT+6", False)
+tzabbr_register("T", "Tango Time Zone", "Military", "Etc/GMT+7", False)
+tzabbr_register("U", "Uniform Time Zone", "Military", "Etc/GMT+8", False)
+tzabbr_register("UTC", "Coordinated Universal Time", "Europe",
                 pytz.utc, False)
-tzabbr_register("V", u"Victor Time Zone", u"Military", "Etc/GMT+9", False)
-tzabbr_register("W", u"Whiskey Time Zone", u"Military", "Etc/GMT+10", False)
-tzabbr_register("WDT", u"Western Daylight Time", u"Australia",
+tzabbr_register("V", "Victor Time Zone", "Military", "Etc/GMT+9", False)
+tzabbr_register("W", "Whiskey Time Zone", "Military", "Etc/GMT+10", False)
+tzabbr_register("WDT", "Western Daylight Time", "Australia",
                 "Australia/West", True)
-tzabbr_register("WEDT", u"Western European Daylight Time", u"Europe",
+tzabbr_register("WEDT", "Western European Daylight Time", "Europe",
                 "Etc/GMT+1", True)
-tzabbr_register("WEST", u"Western European Summer Time", u"Europe",
+tzabbr_register("WEST", "Western European Summer Time", "Europe",
                 "Etc/GMT+1", True)
-tzabbr_register("WET", u"Western European Time", u"Europe", pytz.utc, False)
-tzabbr_register("WST", u"Western Standard Time", u"Australia",
+tzabbr_register("WET", "Western European Time", "Europe", pytz.utc, False)
+tzabbr_register("WST", "Western Standard Time", "Australia",
                 "Australia/West", False)
-tzabbr_register("X", u"X-ray Time Zone", u"Military", "Etc/GMT+11", False)
-tzabbr_register("Y", u"Yankee Time Zone", u"Military", "Etc/GMT+12", False)
-tzabbr_register("Z", u"Zulu Time Zone", u"Military", pytz.utc, False)
+tzabbr_register("X", "X-ray Time Zone", "Military", "Etc/GMT+11", False)
+tzabbr_register("Y", "Yankee Time Zone", "Military", "Etc/GMT+12", False)
+tzabbr_register("Z", "Zulu Time Zone", "Military", pytz.utc, False)
