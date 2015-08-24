@@ -215,7 +215,7 @@ class TestTimeZoneBaseTest(TestTimeZoneBase):
     # Choose 100 random unix timestamps and run them through the assert
     # function.
     random.seed(1)
-    unix_ts = random.sample(xrange(0, os_timestamp_limits[-1]*2), 50)
+    unix_ts = random.sample(xrange(0, min(os_timestamp_limits[-1]*2, sys.maxint)), 50)
     unix_ts.sort()
 
     for timezone in ("Australia/Sydney", "US/Pacific", "Europe/Minsk"):
