@@ -33,7 +33,6 @@ it can also speed up the time taken to import as the defaulttz will no longer
 try and do the detection.
 """
 from builtins import str
-from past.builtins import basestring
 from builtins import object
 
 __author__ = "tansell@google.com (Tim Ansell)"
@@ -60,7 +59,6 @@ if sys.platform == "win32":
 try:
   basestring
 except NameError:
-  # pylint: disable=redefined-builtin
   basestring = str
 
 try:
