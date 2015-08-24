@@ -26,10 +26,7 @@ from builtins import str
 import hashlib
 import os
 
-try:
-  import urllib.request as urllib2
-except ImportError:
-  import urllib.request, urllib.error, urllib.parse
+import urllib.request
 
 try:
   from io import StringIO
