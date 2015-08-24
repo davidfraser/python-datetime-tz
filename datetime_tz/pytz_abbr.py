@@ -42,6 +42,8 @@ CAVEAT 3: The Summer/Standard time difference is really important! For an hour
 each year it is needed to determine which time you are actually talking about.
     2002-10-27 01:20:00 EST != 2002-10-27 01:20:00 EDT
 """
+from __future__ import division
+from past.utils import old_div
 
 import datetime
 import pytz
@@ -107,7 +109,7 @@ def tzinfos_create(use_region):
     if offset == 0:
       return pytz.utc
     if offset:
-      return pytz.FixedOffset(offset/60)
+      return pytz.FixedOffset(old_div(offset,60))
     return unknown
 
   return tzinfos

@@ -23,6 +23,8 @@
 # pylint: disable=g-statement-before-imports
 
 from __future__ import print_function
+from future import standard_library
+standard_library.install_aliases()
 
 """Run the tests against every pytz version available."""
 
@@ -39,7 +41,7 @@ try:
   from urllib.request import urlopen
 except ImportError:
   # pylint: disable=g-import-not-at-top
-  from urllib import urlopen
+  from urllib.request import urlopen
 
 try:
   # pylint: disable=g-import-not-at-top

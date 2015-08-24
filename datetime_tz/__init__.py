@@ -32,6 +32,9 @@ method. It the module is unable to figure out the timezone itself this method
 it can also speed up the time taken to import as the defaulttz will no longer
 try and do the detection.
 """
+from builtins import str
+from past.builtins import basestring
+from builtins import object
 
 __author__ = "tansell@google.com (Tim Ansell)"
 
@@ -286,7 +289,7 @@ def _detect_timezone_etc_localtime():
 
     tzdatabase = _load_local_tzinfo()
     if tzdatabase:
-      tznames = tzdatabase.keys()
+      tznames = list(tzdatabase.keys())
       tzvalues = tzdatabase.__getitem__
     else:
       tznames = pytz.all_timezones

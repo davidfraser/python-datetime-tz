@@ -19,6 +19,9 @@
 # pylint: disable=g-import-not-at-top
 
 """This script updates win32tz_map based on the data at the URL below."""
+from future import standard_library
+standard_library.install_aliases()
+from builtins import str
 
 import hashlib
 import os
@@ -26,12 +29,12 @@ import os
 try:
   import urllib.request as urllib2
 except ImportError:
-  import urllib2
+  import urllib.request, urllib.error, urllib.parse
 
 try:
   from io import StringIO
 except ImportError:
-  from StringIO import StringIO
+  from io import StringIO
 
 try:
   # pylint: disable=redefined-builtin
@@ -51,7 +54,7 @@ _CLDR_WINZONES_URL = "http://www.unicode.org/repos/cldr/trunk/common/supplementa
 
 def download_cldr_win32tz_map_xml():
   """Downloads the XML that maps between Windows and Olson timezone names."""
-  return urllib2.urlopen(_CLDR_WINZONES_URL).read()
+  return urllib.request.urlopen(_CLDR_WINZONES_URL).read()
 
 
 def create_win32tz_map(windows_zones_xml):

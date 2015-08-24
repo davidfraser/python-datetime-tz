@@ -36,6 +36,11 @@
 # pylint: disable=g-tzinfo-datetime
 
 """Tests for the datetime_tz module."""
+from future import standard_library
+standard_library.install_aliases()
+from builtins import str
+from builtins import range
+from builtins import object
 
 __author__ = "tansell@google.com (Tim Ansell)"
 
@@ -66,14 +71,14 @@ except ImportError:
 
 try:
   # pylint: disable=g-import-not-at-top,unused-import
-  import __builtin__ as builtins
+  import builtins as builtins
 except ImportError:
   # pylint: disable=g-import-not-at-top,unused-import
   import builtins
 
 try:
   # pylint: disable=g-import-not-at-top
-  from StringIO import StringIO
+  from io import StringIO
 except ImportError:
   # pylint: disable=g-import-not-at-top
   from io import StringIO
@@ -107,7 +112,7 @@ class MockMe(object):
 
   # pylint: disable=unused-variable,exec-used
   def tearDown(self):
-    for tomock, tounmock in self.mocked.items():
+    for tomock, tounmock in list(self.mocked.items()):
       exec("%s = tounmock" % tomock)
 
 
@@ -215,7 +220,7 @@ class TestTimeZoneBaseTest(TestTimeZoneBase):
     # Choose 100 random unix timestamps and run them through the assert
     # function.
     random.seed(1)
-    unix_ts = random.sample(xrange(0, min(os_timestamp_limits[-1]*2, sys.maxsize)), 50)
+    unix_ts = random.sample(range(0, min(os_timestamp_limits[-1]*2, sys.maxsize)), 50)
     unix_ts.sort()
 
     for timezone in ("Australia/Sydney", "US/Pacific", "Europe/Minsk"):
@@ -1334,7 +1339,7 @@ class TestDatetimeTZ(TestTimeZoneBase):
     def_tz = datetime_tz._default_tzinfos()
     self.assertTrue("Australia/Sydney" in def_tz)
     self.assertFalse("Made/Up" in def_tz)
-    self.assertTrue("Australia/Sydney" in def_tz.keys())
+    self.assertTrue("Australia/Sydney" in list(def_tz.keys()))
     self.assertTrue("Australia/Sydney" in def_tz)
     self.assertRaises(KeyError, def_tz.get, "Made/Up")
     self.assertEquals(def_tz.get("Made/Up", None), None)
