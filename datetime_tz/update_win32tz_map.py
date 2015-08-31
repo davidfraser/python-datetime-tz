@@ -24,7 +24,10 @@ from builtins import str
 import hashlib
 import os
 
-import urllib.request
+try:
+  import urllib2 as request
+except ImportError:
+  from urllib import request
 
 try:
   from io import StringIO
@@ -52,7 +55,7 @@ _CLDR_WINZONES_URL = "http://www.unicode.org/repos/cldr/trunk/common/supplementa
 
 def download_cldr_win32tz_map_xml():
   """Downloads the XML that maps between Windows and Olson timezone names."""
-  return urllib.request.urlopen(_CLDR_WINZONES_URL).read()
+  return request.urlopen(_CLDR_WINZONES_URL).read()
 
 
 def create_win32tz_map(windows_zones_xml):
